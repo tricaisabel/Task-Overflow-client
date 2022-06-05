@@ -40,7 +40,7 @@ export default function CreateProject(props) {
             delete project.password2;
             team.push(user.firstName+" "+user.lastName);
             project["team"]=team;
-            const response = await fetch(`http://localhost:3001/api/projects`, {
+            const response = await fetch(`https://task-overflow.herokuapp.com/api/projects`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

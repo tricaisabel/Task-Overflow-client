@@ -33,7 +33,7 @@ export default function SignIn(){
     async function addUser(){
         if(error===false){
             const body=generateBody();
-            const response = await fetch(`http://localhost:3001/api/users`, {
+            const response = await fetch(`https://task-overflow.herokuapp.com/api/users`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -15,7 +15,7 @@ export default function ItemMessages(props) {
 
     async function getMessages(){
       const body= { "parentId":props.itemId};
-      const response = await fetch(`http://localhost:3001/api/existMessage`, {
+      const response = await fetch(`https://task-overflow.herokuapp.com/api/existMessage`, {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'

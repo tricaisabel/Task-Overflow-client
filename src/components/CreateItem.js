@@ -41,7 +41,7 @@ export default function CreateProject(props) {
             projectId:project["_id"]
         };
         console.log(newItem);
-        const response = await fetch(`http://localhost:3001/api/items`, {
+        const response = await fetch(`https://task-overflow.herokuapp.com/api/items`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

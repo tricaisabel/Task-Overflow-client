@@ -32,7 +32,7 @@ export default function Overview(){
 
     async function getProjects(){
         const body= { "team":user.firstName+" "+user.lastName };
-        const response = await fetch(`http://localhost:3001/api/existProject`, {
+        const response = await fetch(`https://task-overflow.herokuapp.com/api/existProject`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

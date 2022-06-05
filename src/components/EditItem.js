@@ -41,7 +41,7 @@ export default function CreateProject(props) {
             endDate:endDate,
             projectId:project["_id"]
         };
-        const response = await fetch(`http://localhost:3001/api/item/${props.item["_id"]}`, {
+        const response = await fetch(`https://task-overflow.herokuapp.com/api/item/${props.item["_id"]}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'

@@ -20,7 +20,7 @@ export default function JoinProject(props) {
   const user=useSelector((state)=>state.user);
 
   async function updateTeamProject(project,id){
-    const response = await fetch(`http://localhost:3001/api/project/${id}`, {
+    const response = await fetch(`https://task-overflow.herokuapp.com/api/project/${id}`, {
       method: 'PATCH',
       headers: {
           'Content-Type': 'application/json'
@@ -38,7 +38,7 @@ export default function JoinProject(props) {
 
   async function joinProject(){
     const body= { "_id":projectId, "password":projectPassword };
-    const response = await fetch(`http://localhost:3001/api/existProject`, {
+    const response = await fetch(`https://task-overflow.herokuapp.com/api/existProject`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

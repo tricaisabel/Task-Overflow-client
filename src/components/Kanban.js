@@ -29,7 +29,7 @@ export default function AlignItemsList(props) {
         let body={...item};
         const sign=direction==="right"?1:-1;
         body.progress=item.progress+sign*50;
-        const response = await fetch(`http://localhost:3001/api/item/${item["_id"]}`, {
+        const response = await fetch(`https://task-overflow.herokuapp.com/api/item/${item["_id"]}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ export default function AlignItemsList(props) {
     async function assignYourself(item){
         let body={...item};
         body.assignedTo=user.firstName+" "+user.lastName;
-        const response = await fetch(`http://localhost:3001/api/item/${item["_id"]}`, {
+        const response = await fetch(`https://task-overflow.herokuapp.com/api/item/${item["_id"]}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'
@@ -81,7 +81,7 @@ export default function AlignItemsList(props) {
     async function deleteItem(item){
         if (window.confirm('The item will be permanently deleted. Are you sure?'))
         {
-            const response = await fetch(`http://localhost:3001/api/item/${item["_id"]}`, {method: 'DELETE'});
+            const response = await fetch(`https://task-overflow.herokuapp.com/api/item/${item["_id"]}`, {method: 'DELETE'});
             if (response.status === 200) {
                 props.getItems();
             }

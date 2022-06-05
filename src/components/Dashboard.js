@@ -17,7 +17,7 @@ export default function Dashboard(){
 
     async function calcProjectProgress(){
       const body= { "projectId":project["_id"]};
-      const response = await fetch(`http://localhost:3001/api/existItems`, {
+      const response = await fetch(`https://task-overflow.herokuapp.com/api/existItems`, {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ export default function Dashboard(){
     }
 
     async function getMembersInfo(){
-        const response = await fetch(`http://localhost:3001/api/users`);
+        const response = await fetch(`https://task-overflow.herokuapp.com/api/users`);
         if(response.status===200){
             const data=await response.json();
             const localTeam=[];

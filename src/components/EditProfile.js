@@ -39,7 +39,7 @@ export default function EditProfile(props) {
     async function saveProject(){
         newUser.color=color.hex;
         console.log(user);
-        const response = await fetch(`http://localhost:3001/api/user/${user["_id"]}`, {
+        const response = await fetch(`https://task-overflow.herokuapp.com/api/user/${user["_id"]}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'

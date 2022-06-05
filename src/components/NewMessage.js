@@ -25,7 +25,7 @@ export default function NewMessage(props){
     }
 
     async function handleSubmit(){
-        const response = await fetch(`http://localhost:3001/api/messages`, {
+        const response = await fetch(`https://task-overflow.herokuapp.com/api/messages`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

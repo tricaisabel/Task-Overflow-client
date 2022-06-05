@@ -16,7 +16,7 @@ export default function AlignItemsList() {
 
     async function getMessages(){
       const body= { "parentId":project["_id"],"sender":project.manager.name};
-      const response = await fetch(`http://localhost:3001/api/existMessage`, {
+      const response = await fetch(`https://task-overflow.herokuapp.com/api/existMessage`, {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'

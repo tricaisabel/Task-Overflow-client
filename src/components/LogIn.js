@@ -19,7 +19,7 @@ export default function LogIn(){
 
     async function authUser(){
         const body= { "username":user.username, "password":user.password };
-        const response = await fetch(`http://localhost:3001/api/existUser`, {
+        const response = await fetch(`https://task-overflow.herokuapp.com/api/existUser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

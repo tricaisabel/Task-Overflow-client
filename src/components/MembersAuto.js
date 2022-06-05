@@ -5,7 +5,7 @@ export default function MembersAuto(props){
     let usernames=[];
 
     async function getUsers(){
-        const response = await fetch(`http://localhost:3001/api/users`);
+        const response = await fetch(`https://task-overflow.herokuapp.com/api/users`);
         if(response.status===200){
             const data=await response.json();
             data.map((user)=>usernames.push(user.firstName+" "+user.lastName));

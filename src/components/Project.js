@@ -97,7 +97,7 @@ export default function Project(){
     ]
 
     async function getProject(){
-        const response = await fetch(`http://localhost:3001/api/project/${id}`);
+        const response = await fetch(`https://task-overflow.herokuapp.com/api/project/${id}`);
         if(response.status===200){
             let newProject={};
             const data=await response.json(); 
@@ -114,7 +114,7 @@ export default function Project(){
     async function deleteProject(){
         if (window.confirm('The project will be permanently deleted. Are you sure?'))
         {
-            const response = await fetch(`http://localhost:3001/api/project/${project["_id"]}`, {method: 'DELETE'});
+            const response = await fetch(`https://task-overflow.herokuapp.com/api/project/${project["_id"]}`, {method: 'DELETE'});
             if (response.status === 200) {
                 alert("The project has been permanently deleted");
                 navigate("/overview");

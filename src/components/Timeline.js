@@ -97,7 +97,7 @@ export default function Timeline(props){
               delete body.assignedTo;
               break;
       }
-      const response = await fetch(`http://localhost:3001/api/existItems`, {
+      const response = await fetch(`https://task-overflow.herokuapp.com/api/existItems`, {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'

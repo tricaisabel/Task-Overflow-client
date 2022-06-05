@@ -52,7 +52,7 @@ export default function EditProject(props) {
         {
             delete project.password2;
             project["team"]=team;
-            const response = await fetch(`http://localhost:3001/api/project/${props.edit["_id"]}`, {
+            const response = await fetch(`https://task-overflow.herokuapp.com/api/project/${props.edit["_id"]}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
